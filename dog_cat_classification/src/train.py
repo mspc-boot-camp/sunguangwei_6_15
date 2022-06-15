@@ -41,6 +41,6 @@ def train():
 
     end = time.time()
     print('Training time: %s Seconds' % (end - start))
-    torch.save(model.state_dict(), 'F:/PythonSave/dog_cat_classification/weights/weight_dog_cat.pt')
+    torch.save(model.state_dict(), '../weights/weight_dog_cat.pt')
 if __name__ == '__main__':
     train()

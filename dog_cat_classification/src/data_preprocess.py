@@ -45,7 +45,7 @@ class MyDataset(Dataset):
 
     def __len__(self):
         return len(self.data)
-def load_test_data():#学长预测时的函数
+def load_test_data(test_path):#学长预测时的函数
     print('data processing...')
     transform = transforms.Compose([
         transforms.RandomHorizontalFlip(p=0.3),
@@ -55,7 +55,7 @@ def load_test_data():#学长预测时的函数
         transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))  # normalization
     ])
     data = []
-    f = open(r"F:\PythonSave/dog_cat_classification/input/img_paths_test.txt", 'r')
+    f = open(test_path, 'r')
     ff = f.readlines()
     for line in ff:
         line = line.rstrip("\n")
